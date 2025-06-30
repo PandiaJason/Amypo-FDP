@@ -156,3 +156,174 @@ void main(){
     
 }
 ```
+
+
+## 6
+
+In the enchanted village of Mirrovia, two magical numbers are displayed side by side on a glowing scroll. These numbers often need to swap places for a balance spell to work properly. You are the royal programmer, tasked with ensuring the scroll always reflects the swapped state of these numbers.Given two integers, your mission is to switch their positions using a spell of precision and display the result in the sacred format the scroll understands.
+## Input Format
+The first line contains an integer a representing the first magical number.
+The second line contains an integer b representing the second magical number.
+## Output Format
+Print the output in the following format: Swapped values : <value_of_a>,<value_of_b>
+
+```C
+#include<stdio.h>
+
+
+void main()
+{
+    
+    int a,b,t;
+    scanf("%d %d", &a, &b);
+    
+    t = a;
+    a = b;
+    b = t;
+    
+    printf("Swapped values  : %d,%d", a, b);
+}
+```
+
+## 7
+As a health advisor, calculate Body Mass Index (BMI) to assess whether an individual has a healthy body weight for their height. The BMI is determined using the following formula:
+BMI = weight * height2
+
+## Input Format
+
+The first line consists of one integer representing weight (in kilograms).
+The second line consists of one floating-point number representing height (in meters).
+
+## Output Format
+Print the BMI rounded off to two precision points.
+
+```C
+#include<stdio.h>
+
+void main()
+{
+    int kg;
+    float h;
+    
+    scanf("%d %f", &kg, &h);
+    
+    if ((kg >= 0 && kg <=100) && (h >= 0.0 && h <=5.5)){
+        float h2 = h*h;
+        
+        float bmi = (float) kg / h2;
+        printf("%.2f\n", bmi );
+    }
+}
+```
+
+## 8
+
+Chef Alex is preparing a special dish and needs to measure precise quantities of flour and sugar for his recipe. Help him by implementing a module that reads two integers: one for the quantity of flour and another for sugar, then display the quantities of flour and sugar.
+## Input Format
+The first integer represents the quantity of flour, denoted as 'a'.
+The second integer represents the quantity of sugar, denoted as 'b'.
+## Output Format
+Print the two integers in the format:
+
+Flour: <a>
+Sugar: <b>.
+
+```C
+#include<stdio.h>
+
+void main()
+{
+    int a,b;
+    scanf("%d %d", &a,&b);
+    if (a>=1||b <= 100){
+    printf("Flour: %d\n", a);
+    printf("Sugar: %d\n",b);}
+
+    
+}
+
+```
+
+## 9
+A vigilant traffic officer stands at an intersection, keenly observing the colorful signals of the traffic lights. Intrigued by their meanings, they decide to implement a module to decipher the signals and ensure safety on the roads. Your task is to create a program that reads the traffic light signal and prints the corresponding action.
+When the traffic light shows Red, it commands Stop.
+• When it displays Yellow, it prompts Ready.
+When it gleams Green, it eagerly shouts Go.
+## Input Format
+The input consists of a string s representing the traffic light signal.
+## Output Format:
+Print the corresponding action based on the signal.
+Print "Invalid input" for any other color.
+
+```C
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+    char txt[100];
+    scanf("%[^/]", txt);
+        // printf("%s", txt);
+
+    if (strcmp(txt,"Red") == 0){
+        printf("Stop\n");
+    }
+    
+    else if (strcmp(txt,"Yellow") == 0){
+        printf("Ready\n");
+    }
+    
+    else if (strcmp(txt,"Green") == 0){
+        printf("Go\n");
+    }
+    
+    else{
+        printf("Invalid input\n");
+        
+    }
+    
+    return 0;
+    
+}
+```
+
+## 10
+
+Ms. Edwards's class uses an interactive app to teach students about vowels and consonants. Students enter a single letter, and the app instantly tells them whether the letter is a vowel or a consonant. If the input is not a valid alphabet letter, the app will display an error message.
+## Input Format
+The input consists of a single character, ch
+## Output Format
+
+Print Vowel if the character is a vowel (a, e, i, o, u - case-insensitive).
+Print Consonant if the character is a consonant (any other alphabetic character).
+Print Invalid input if the input is not an alphabetic character.
+
+```C
+#include<stdio.h>
+#include<ctype.h>
+
+int main()
+{
+    char ch;
+    
+    scanf("%c", &ch);
+    
+        
+    if(!isalpha(ch)){
+        printf("Invalid input");
+        return 0;
+        
+    }
+    
+    if (ch == 'a' || ch == 'A' || ch == 'e' || ch == 'E' || ch == 'i' || ch == 'I'  || ch == 'o' || ch == 'O' || ch == 'u' || ch == 'U'  ){
+        printf("Vowel\n");
+    }
+
+    
+    else if(!(ch == 'a' || ch == 'A' || ch == 'e' || ch == 'E' || ch == 'i' || ch == 'I'  || ch == 'o' || ch == 'O' || ch == 'u' || ch == 'U'  )){
+        printf("Consonant\n");
+    }
+    return 0;
+    
+}
+```
