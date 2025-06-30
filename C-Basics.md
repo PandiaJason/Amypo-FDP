@@ -98,7 +98,7 @@ void main(){
 }
 ```
 
-#4
+## 4
 
 In a geometry lab activity, students are investigating triangle angle relationships. Given two known angles of a triangle, help them determine the third angle, ensuring the input values are valid and form a proper triangle.
 ## Input Format
@@ -126,7 +126,7 @@ void main(){
 
 ```
 
-##5 
+## 5 
 
 At a civic awareness camp, participants check if they're ready for their first vote. A validation system reviews each person's age and responds with encouragement or approval based on eligibility.
 ## Input Format
